@@ -11,10 +11,8 @@ let direction;
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(
     function (position) {
-      console.log(position);
       let lat = position.coords.latitude;
       let lon = position.coords.longitude;
-      console.log(lat, lon);
       getWeatherByLocation(lat, lon);
     },
     function (error) {
@@ -33,10 +31,11 @@ async function getWeather(city) {
   myGetMonth();
   myGetWindDirection();
   display();
+  console.log(weatherData)
 }
 async function getWeatherByLocation(lat, lon) {
   let response = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=b984d72dead8479ba23143956251709&q=${lat},${lon}&days=3&aqi=no&alerts=no`
+    `https://api.weatherapi.com/v1/forecast.json?key=b984d72dead8479ba23143956251709&q=${lat},${lon}&days=3&aqi=no&alerts=no`
   );
   weatherData = await response.json();
   myGetDate();
@@ -134,7 +133,7 @@ function display() {
               <div class="extra d-flex column-gap-4">
                 <div>
                   <img src="images/icon-umberella.png" alt="" />
-                  <span>${weatherData.current.precip_mm}%</span>
+                  <span>${weatherData.forecast.forecastday[0].day.daily_chance_of_rain}%</span>
                 </div>
                 <div>
                   <img src="images/icon-wind.png" alt="" />
