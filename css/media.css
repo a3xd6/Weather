@@ -30,7 +30,7 @@
     justify-content: flex-start;
   }
 
-  #contact .d-flex:not(.justify-content-end) {
+  #contact .d-flex:not(.justify-content-end,.navbar-brand,.div-icons) {
     flex-direction: column !important;
   }
   #contact .form-control {
@@ -46,7 +46,7 @@
     flex-direction: row;
     img {
       align-self: center;
-      margin-left: 40px;
+      margin-left: 20px;
     }
   }
 }
