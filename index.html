@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg py-5">
+      <div class="container-md">
+        <a class="navbar-brand d-flex column-gap-3" href="index.html">
+          <div>
+            <img src="images/logo@2x.png" width="64px" />
+          </div>
+          <span>
+            <h5>Weather</h5>
+            <p class="pt-1">tagline goes here</p>
+          </span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item rounded-top-3">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Live cameras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Photos</a>
+            </li>
+            <li class="nav-item rounded-bottom-3">
+              <a class="nav-link" href="html/contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <div class="container-md position-relative">
+        <div class="form">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Find your location..."
+            id="searchBar"
+          />
+          <button class="btn" type="button" id="FindBtn">Find</button>
+        </div>
+      </div>
+    </header>
+    <section class="forcast-table">
+      <div class="container-md">
+        <div id="row" class="row align-self-stretch gx-0"></div>
+      </div>
+    </section>
+    <footer>
+      <div class="container-md py-5">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="form position-relative">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter your email to subscribe..."
+              />
+              <button class="btn" type="button">Subscribe</button>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex column-gap-2">
+              <div class="icon-bg"><i class="fa-brands fa-facebook-f"></i></div>
+              <div class="icon-bg"><i class="fa-brands fa-twitter"></i></div>
+              <div class="icon-bg">
+                <i class="fa-brands fa-google-plus-g"></i>
+              </div>
+              <div class="icon-bg"><i class="fa-brands fa-pinterest"></i></div>
+            </div>
+          </div>
+          <p class="mt-4">
+            Copyright 2014 Company name. Designed by Themezy. All rights
+            reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
